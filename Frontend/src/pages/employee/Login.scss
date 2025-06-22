@@ -1,0 +1,74 @@
+.loginPageWrapper {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    position: relative;
+    padding-top: 80px;
+
+    .topBar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #4caf50;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 24px;
+        font-weight: bold;
+        z-index: 10;
+
+        .roleToggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+
+            .MuiToggleButton-root {
+                color: white; // Text color
+                border: 1px solid white;
+                background-color: transparent;
+                border-radius: 8px !important;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+
+                &.Mui-selected {
+                    background-color: white !important;
+                    color: #4caf50 !important;
+                }
+            }
+        }
+    }
+
+    .welcomeText {
+        text-align: center;
+        font-weight: bold;
+        margin: 12px 0;
+        font-size: 20px;
+        margin-top: 5%;
+    }
+
+    .loginFormContainer {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+
+        .formTitle {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+
+
+        .submitBtn {
+            margin-top: 20px;
+            padding: 10px;
+        }
+    }
+}
