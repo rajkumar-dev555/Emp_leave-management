@@ -2,18 +2,6 @@ const express = require('express');
 const  router = express.Router();
 const pool = require('../db');
 
-// Add new leave type
-// router.post('/', async (req, res) => {
-//   const { name, description } = req.body;
-//   try {
-//     await pool.query('INSERT INTO leave_types (name, description) VALUES (?, ?)', [name, description]);
-//     res.status(201).json({ message: 'Leave type added successfully' });
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// });
-
-// Add leave type
 router.post('/', async (req, res) => {
   const { name, description } = req.body;
   if (!name) {
@@ -32,7 +20,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Get all leave types
+
 router.get('/', async (req, res) => {
   try {
     const [rows] = await pool.query('SELECT * FROM leave_types ORDER BY id DESC');
@@ -42,7 +30,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get leave type by ID
+
 router.get('/:id', async (req, res) => {
   try {
     const [rows] = await pool.query('SELECT * FROM leave_types WHERE id = ?', [req.params.id]);
@@ -70,7 +58,6 @@ router.put('/:id', async (req, res) => {
 });
 
 
-// Delete leave type
 router.delete('/:id', async (req, res) => {
   try {
     await pool.query('DELETE FROM leave_types WHERE id = ?', [req.params.id]);

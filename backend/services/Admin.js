@@ -3,9 +3,6 @@ const router = express.Router();
 const db = require('../db');
 
 
-
-
-// GET counts for dashboard cards
 router.get('/dashboard/counts', async (req, res) => {
   try {
     const [[{ empCount }]] = await db.query('SELECT COUNT(*) AS empCount FROM users WHERE role = ?', ['employee']);
