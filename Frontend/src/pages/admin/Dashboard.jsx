@@ -1,6 +1,4 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import { Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+
 
 
 import React, { useState, useEffect } from 'react';
@@ -60,22 +58,7 @@ import NotApprovedLeaves from './Leaves/NotApprovedLeaves';
 
 const drawerWidth = 240;
 const AdminDashboard = () => {
-  //   const [leaves, setLeaves] = useState([]);
-
-  //   const fetchLeaves = async () => {
-  //     const res = await axios.get('http://localhost:5000/api/leaves');
-  //     setLeaves(res.data);
-  //   };
-
-  //   const handleUpdateStatus = async (id, status) => {
-  //     await axios.put(`http://localhost:5000/api/leaves/${id}/status`, { status });
-  //     fetchLeaves();
-  //   };
-
-  //   useEffect(() => {
-  //     fetchLeaves();
-  //   }, []);
-
+ 
 
   const [openDept, setOpenDept] = useState(false);
   const [openLeave, setOpenLeave] = useState(false);
