@@ -1,4 +1,4 @@
-// src/components/UpdateLeaveType.js
+
 import React from 'react';
 import {
   Box,

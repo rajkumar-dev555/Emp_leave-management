@@ -108,7 +108,7 @@ const ManageDepartment = ({ selectedView }) => {
                   <TableCell>{index + 1}</TableCell>
                   <TableCell>{dept.code}</TableCell>
                   <TableCell>{dept.name}</TableCell>
-                  <TableCell>{dept.short_name}</TableCell> {/* <-- Fixed here */}
+                  <TableCell>{dept.short_name}</TableCell> 
                   <TableCell>{new Date(dept.created_at).toLocaleDateString()}</TableCell>
                   <TableCell align="center">
                     <IconButton color="primary" onClick={() => handleEdit(dept.id)}>
@@ -139,8 +139,8 @@ const ManageDepartment = ({ selectedView }) => {
           editingId={editingId}
           setEditingId={setEditingId}
           fetchDepartments={fetchDepartments}
-          editData={editData} // ✅ add this
-          setEditData={setEditData} // ✅ add this
+          editData={editData} 
+          setEditData={setEditData} 
         />
       )}
 
@@ -150,5 +150,3 @@ const ManageDepartment = ({ selectedView }) => {
 
 export default ManageDepartment;
 
-
-{/* {selectedView === 'update-department' && <UpdateForm />} */ }

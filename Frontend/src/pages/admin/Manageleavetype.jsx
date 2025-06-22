@@ -20,7 +20,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
 
-import UpdateLeaveType from './UpdateLeavetype'; // ✅ make sure this path is correct
+import UpdateLeaveType from './UpdateLeavetype'; 
 
 const ManageLeaveType = () => {
   const [leaveTypes, setLeaveTypes] = useState([]);

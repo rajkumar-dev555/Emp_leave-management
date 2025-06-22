@@ -23,15 +23,7 @@ const AddDepartment = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // const handleAdd = async () => {
-  //   try {
-  //     await axios.post('http://localhost:5000/api/departments', formData);
-  //     setSuccess(true);
-  //     setFormData({ code: '', name: '', shortName: '' });
-  //   } catch (error) {
-  //     console.error('Error adding department:', error);
-  //   }
-  // };
+  
 
 const [error, setError] = useState('');
   const handleAdd = async () => {
@@ -39,7 +31,7 @@ const [error, setError] = useState('');
     await axios.post('http://localhost:5000/api/departments', formData);
     setSuccess(true);
     setFormData({ code: '', name: '', shortName: '' });
-    setError(''); // Clear error
+    setError(''); 
   } catch (error) {
     console.error('Error adding department:', error);
     if (error.response && error.response.status === 409) {
